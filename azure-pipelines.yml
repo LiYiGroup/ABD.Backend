@@ -12,8 +12,8 @@ variables:
 steps:
 - task: DotNetCoreInstaller@0
   inputs:
-    version: '2.0' # replace this value with the version that you need for your project
-  displayName: 'install .NET Core 2.0'
+    version: '2.0.0' # replace this value with the version that you need for your project
+  displayName: 'install .NET Core 2.0.0'
 
 - script: dotnet restore
   displayName: 'restore packages'
