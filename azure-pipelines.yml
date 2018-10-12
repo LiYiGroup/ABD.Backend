@@ -10,10 +10,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: cd ABDService/ABDService
-
-- script: dotnet restore
-  displayName: 'restore packages'
-
-- script: dotnet build --configuration $(buildConfiguration) 
+- script: | 
+   cd ABDService/ABDService
+   dotnet restore
+   dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
